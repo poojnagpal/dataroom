@@ -1,2 +1,2 @@
-web: yarn start  # This is for the frontend
+web: cd client && yarn start
 api: node server.js  # This is for the backend
