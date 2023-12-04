@@ -1,0 +1,306 @@
+/* DataRoom.css */
+.data-room {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+.file-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-list li {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+/* Indent children a bit more to the right to show hierarchy */
+.file-list li ul {
+  padding-left: 20px; /* Adjust the value as needed */
+}
+
+/* Styles for the toggle icon */
+.toggle-icon {
+  cursor: pointer;
+  user-select: none;
+  padding-right: 5px; /* Give some space between the toggle icon and the name */
+}
+
+/* Additional styles for items */
+.file-item.folder > span {
+  display: flex;
+  align-items: center;
+}
+
+.file-item.folder .file-name {
+  margin-left: 5px; /* This will give space between the toggle icon and the folder name */
+}
+
+.file-item.file {
+  padding-left: 25px; /* This will indent the file items to align under the folder name */
+}
+
+/* Styles for each level to increase indentation */
+.item-level-0 {
+  padding-left: 0;
+}
+
+.item-level-1 {
+  padding-left: 20px; /* Increase indentation for level 1 items */
+}
+
+.item-level-2 {
+  padding-left: 40px; /* Increase indentation for level 2 items */
+}
+
+/* and so on for deeper levels... */
+
+/* Styles for folder header */
+.folder-contents {
+  padding-left: 20px;
+  margin-top: 5px; /* This will add space above the contents */
+}
+
+
+.folder-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  margin-right: 5px;
+}
+
+.folder-name,
+.file-name {
+  flex-grow: 1;
+}
+
+/* Optional: add interactivity on hover */
+.folder-header:hover,
+.file-name:hover {
+  background-color: #f2f2f2;
+}
+
+
+/* and so on for deeper levels... */
+
+/* Styles for folder header */
+.folder-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  margin-right: 5px;
+}
+
+.folder-name,
+.file-name {
+  flex-grow: 1;
+}
+
+/* Optional: add interactivity on hover */
+.folder-header:hover,
+.file-name:hover {
+  background-color: #f2f2f2;
+}
+
+
+
+/* DataRoom.css */
+/* DataRoom.css */
+
+/* DataRoom.css */
+/* Add this to your CSS */
+.dragging {
+  opacity: 0.5;
+}
+
+/* Highlight drop targets */
+.folder-name.drop-target {
+  background-color: #e0e0e0;
+}
+
+
+.inline-rename-input {
+  /* Styles to make the input blend into the list */
+  font-size: 16px;
+  padding: 5px;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: calc(100% - 10px); /* Adjust width as needed */
+}
+
+
+
+/* Hide the options icon and show the input field */
+.file-item.renaming .options-icon,
+.file-item.renaming .name {
+  display: none;
+}
+
+/* Show the input field when renaming */
+.file-item.renaming .inline-rename-input {
+  display: block;
+}
+
+
+.options-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* DataRoom.css */
+.item-icon {
+  /* Styles for item icon */
+}
+
+.item-name {
+  /* Styles for item name */
+  flex-grow: 1; /* Ensures that the name takes up the available space */
+}
+
+.options-icon {
+  cursor: pointer;
+  margin-left: auto; /* Pushes the icon to the right */
+}
+
+.item-options {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  right: 20px; /* Adjust as needed */
+  z-index: 10;
+}
+
+.item-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-options li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.item-options li:hover {
+  background-color: #f0f0f0;
+}
+
+
+.item-options {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  right: 20px; /* Adjust as needed */
+  z-index: 10;
+}
+
+.item-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-options li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.item-options li:hover {
+  background-color: #f0f0f0;
+}
+
+
+.context-menu {
+  position: absolute;
+  z-index: 1000;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+.context-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+
+li {
+  cursor: pointer; /* Change cursor to pointer to indicate clickability */
+  display: flex;
+  align-items: center; /* Align icons and text */
+}
+
+
+.data-room input[type="text"],
+.data-room input[type="file"] {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+}
+
+.data-room button {
+  padding: 8px 16px;
+  margin-bottom: 20px;
+}
+
+.upload-success {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.upload-error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.file-list h2 {
+  margin-bottom: 10px;
+}
+
+.file-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.file-list li {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.file-icon {
+  margin-right: 10px;
+}
+
+.file-name {
+  flex: 2;
+}
+
+.file-modified {
+  flex: 1;
+}
+
+.file-members {
+  flex: 1;
+}
+
+.file-options {
+  cursor: pointer;
+}

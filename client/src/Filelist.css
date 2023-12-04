@@ -1,0 +1,41 @@
+/* FileList.css */
+.file-list {
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+  }
+  
+  .file-list h2 {
+    margin-bottom: 10px;
+  }
+  
+  .file-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .file-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .file-icon {
+    margin-right: 10px;
+  }
+  
+  .file-name {
+    flex: 2;
+  }
+  
+  .file-modified {
+    flex: 1;
+  }
+  
+  .file-members {
+    flex: 1;
+  }
+  
+  .file-options {
+    flex: 0;
+  }
