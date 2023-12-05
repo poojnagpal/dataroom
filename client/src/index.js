@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';  // If you have global styles
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
-// import reportWebVitals from './reportWebVitals'; // Optional, used for measuring performance
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <App />
-  </React.StrictMode>,
+  </Router>,
   document.getElementById('root')
 );
 

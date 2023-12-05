@@ -1,7 +1,11 @@
 // DataRoom.js
-import React, { useState } from 'react';
+import React, { useState,  useEffect} from 'react';
 import axios from 'axios';
 import './Dataroom.css'; // Make sure to create this CSS file
+import { useNavigate } from 'react-router-dom';
+
+
+  
 
 function DataRoom() {
   const [roomName, setRoomName] = useState('');
@@ -12,6 +16,15 @@ function DataRoom() {
   const [contextMenu, setContextMenu] = useState(null);
   const [renamingItemId, setRenamingItemId] = useState(null);
   const [renamingValue, setRenamingValue] = useState('');
+  const navigate = useNavigate(); // Move this inside the DataRoom function component
+
+  useEffect(() => {
+    const authToken = localStorage.getItem('authToken');
+    if (!authToken) {
+      // Redirect to login page if the authToken is not present
+      navigate('/');
+    }
+  }, [navigate]);
 
 
 
@@ -382,12 +395,13 @@ function DataRoom() {
 
 
       <input 
+      class="form-field"  
               type="text" 
               placeholder="Enter New Folder Name" 
               value={newFolderName} 
               onChange={(e) => setNewFolderName(e.target.value)}
             />
-      <button onClick={createFolder}>Create Folder</button>
+      <button className="button-6" onClick={createFolder}>Create Folder</button>
       <div className="file-list">
         <h2>My Files</h2>
         {/* {renderItems()} */}

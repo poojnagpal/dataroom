@@ -6,7 +6,48 @@ const AWS = require('aws-sdk');
 const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
+// const passport = require('passport');
+// const GoogleStrategy = require('passport-google-oauth20').Strategy;
+// const session = require('express-session');
 
+// // Configure the Google strategy for use by Passport.
+// passport.use(new GoogleStrategy({
+//     clientID: '971196842332-pd1b4tviei8l21fov0n6g5i9ae2kv5di.apps.googleusercontent.com',
+//     clientSecret: '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',
+//     callbackURL: 'http://localhost:3000/dataroom'
+//   },
+//   function(accessToken, refreshToken, profile, done) {
+//     // Here you would find or create a user in your database
+//     done(null, profile);
+//   }
+// ));
+
+// passport.serializeUser(function(user, done) {
+//   done(null, user);
+// });
+
+// passport.deserializeUser(function(obj, done) {
+//   done(null, obj);
+// });
+
+
+// app.use(session({ secret: 'anything' }));
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+// // Route to start OAuth flow
+// app.get('/auth/google',
+//   passport.authenticate('google', { scope: ['profile', 'email'] })
+// );
+
+// // OAuth callback url
+// app.get('/auth/google/callback', 
+//   passport.authenticate('google', { failureRedirect: '/login' }),
+//   function(req, res) {
+//     // Successful authentication, redirect to the data room.
+//     res.redirect('/dataroom');
+//   }
+// );
 
 
 const PORT = process.env.PORT || 3001; // Set your server port here
