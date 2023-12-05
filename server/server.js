@@ -57,8 +57,10 @@ app.listen(PORT, () => {
 });
 app.use(express.static(path.join(__dirname, 'public')));
 
+const frontendURL = 'https://exquisite-piroshki-a74ed5.netlify.app/';
+
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: frontendURL,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Enable credentials (cookies, authorization headers, etc.) if needed
 }));
@@ -79,10 +81,7 @@ AWS.config.update({
  // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'path/to/your/react-app/build')));
 
-app.use(cors({
-    origin: 'http://localhost:3000' // Replace with the domain of your frontend app
-  }));
-  
+
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
