@@ -67,9 +67,9 @@ app.use(cors({
 
 
 AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: process.env.AWS_REGION // For example, 'us-west-2'
+    accessKeyId: process.env.MYAPP_AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.MYAPP_AWS_SECRET_ACCESS_KEY,
+    region: process.env.MYAPP_AWS_REGION // For example, 'us-west-2'
   });
 
   const upload = multer({ storage: multer.memoryStorage() });
