@@ -57,8 +57,10 @@ app.listen(PORT, () => {
 });
 app.use(express.static(path.join(__dirname, 'public')));
 
+const frontendURL = 'https://exquisite-piroshki-a74ed5.netlify.app/';
+
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: frontendURL,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Enable credentials (cookies, authorization headers, etc.) if needed
 }));
