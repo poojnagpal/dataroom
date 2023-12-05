@@ -41,6 +41,7 @@ function DataRoom() {
   const [structure, setStructure] = useState(false);
   const [showOptionsId, setShowOptionsId] = useState(null)
   const [showOptions, setShowOptions] = useState(null)
+  axios.defaults.baseURL = 'https://exquisite-piroshki-a74ed5.netlify.app';
 
 
 
